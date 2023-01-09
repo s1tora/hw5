@@ -1,0 +1,81 @@
+article.calc {
+    margin: 50px auto;
+    width: 300px;
+    height: 500px;
+    border: 1px solid #000;
+    background: #000;
+    border-radius: 20px;
+    color: #fff;
+    font-family: Arial;
+    padding: 18px;
+    box-shadow: 4px 4px 4px #4f4f4f;
+}
+
+.calc_result {
+    height: 125px;
+    padding: 10px;
+    display: grid; /*создаем блок*/
+    justify-items: end; /*блок в конец*/
+    align-items: end;
+    margin-bottom: 25px;
+    text-align: right; /*сдивгаем вправо*/
+    font-size: 4rem;
+    margin: 0;
+}
+
+.calc_result p {
+    text-align: right; /*сдивгаем вправо*/
+    font-size: 4rem;
+    margin: 0;
+}
+
+.buttons {
+    display: grid; /*выравнивание кнопок по 4 в ряд*/
+    grid-template-areas: 
+    "ac plus-minus precent division"
+    "seven eight nine multi"
+    "four five siz minus"
+    "one two three plus"
+    "zero zero dot equal";
+    grid-gap: 7px;
+    justify-items: center;
+}
+
+button {
+    width: 60px;
+    height: 60px;
+    background: #333;
+    border-radius: 50%;
+    text-align: center; /*текст по центру кнопки*/
+    line-height: 60px;
+    font-size: 1.85rem;
+    cursor: pointer; /*изменить курсор при наведении*/
+    user-select: none; /*не позволяет выделять кнопки*/
+}
+
+.text {
+    color: #fff;
+}
+
+.zero {
+    grid-area: zero; /*кнопка 0 занимает 2 ячейки*/
+    width: 100%;
+    border-radius: 34px;
+}
+
+
+button:hover {
+    filter: brightness(120%); /*изменение цвета при наведении*/
+}
+
+button:active {
+    filter: brightness(90%); /* состояние нажатой кнопки*/
+}
+
+.bg-grey {
+    background: #a7a7a7;
+}
+
+.bg-orange {
+    background: #ff9501;
+}
